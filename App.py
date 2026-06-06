@@ -9,7 +9,7 @@ load_dotenv()
 st.set_page_config(page_title="Health Assistant", page_icon="⛑️")
 
 # Read api from local file or cloud
-api_key = os.getenv("GEMINI_API_KEY") #or st.secrets.get("GEMINI_API_KEY")
+api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 
 SYSTEM_PROMPT = """
 You are a health assistant expert Ai. only answer questions related to health, illness and medication
